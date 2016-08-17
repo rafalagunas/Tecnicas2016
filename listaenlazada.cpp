@@ -12,7 +12,7 @@ NodoContacto *sig;
 
 }NodoContacto;
 
-
+	
 int main(){
 
 
