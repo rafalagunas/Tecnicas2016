@@ -11,9 +11,10 @@ NodoContacto *ant;
 }NodoContacto;
 
 
-void agregar_adelante(int);
-void recorrer(NodoContacto *);
-void recorrer_por_atras(NodoContacto *, int num);
+void agregar_contacto(int);
+void agregar_contacto_antes_de_x(int);
+void recorrer_izquierda(NodoContacto *);
+void recorrer_derecha(NodoContacto *, int num);
 struct NodoContacto *prim, *ult;
 
 int main(){
@@ -27,9 +28,9 @@ ult = (struct NodoContacto *) NULL;
             
             case 1: printf("\nCuantos contactos=");
             scanf("%i",&num);
-            agregar_adelante(num);break;
-            case 2: recorrer(prim);break;
-            case 3: recorrer_por_atras(ult, num); break;
+            agregar_contacto(num);break;
+            case 2: recorrer_izquierda(prim);break;
+            case 3: recorrer_derecha(ult, num); break;
             case 4: break;
             default: printf("Operacion no valida\n");
             break;
@@ -38,7 +39,7 @@ ult = (struct NodoContacto *) NULL;
 return 0;
 }
 
-void agregar_adelante(int TAM){
+void agregar_contacto(int TAM){
 
 struct NodoContacto *nuevo;
     if (nuevo==NULL){
@@ -63,7 +64,7 @@ struct NodoContacto *nuevo;
     }
 }
 
-void recorrer(NodoContacto[]){
+void recorrer_izquierda(NodoContacto[]){
     int con;
     struct NodoContacto *aux;
     con=0;
@@ -80,7 +81,7 @@ void recorrer(NodoContacto[]){
 }
 
 
-void recorrer_por_atras(NodoContacto[], int num){
+void recorrer_derecha(NodoContacto[], int num){
     int con;
     struct NodoContacto *aux;
     con=num;
@@ -94,4 +95,13 @@ void recorrer_por_atras(NodoContacto[], int num){
     if (con==0) {
         printf("\n");
     }
+}
+
+void agregar_contacto_antes_de_x(int){
+
+
+
+
+
+
 }
